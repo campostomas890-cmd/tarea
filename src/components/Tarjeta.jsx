@@ -1,9 +1,15 @@
-function Tarjeta({titulo, descripcion}){
-    return(
-        <div style={{border: '1px solid #ccc',padding:'16px',borderRadius: '8px'}}>
-            <h2>{titulo}</h2>
-            <p>{descripcion}</p>
-        </div>
-    );
+import React from 'react';
+import './Tarjeta.css';
+
+function Tarjeta({ nombre, profesion, imagen, descripcion }) {
+  return (
+    <div className="tarjeta">
+      <img src={imagen} alt={`Fotografía de ${nombre}`} className="tarjeta-img" />
+      <h2 className="tarjeta-nombre">{nombre}</h2>
+      <h3 className="tarjeta-profesion">{profesion}</h3>
+      <p className="tarjeta-descripcion">{descripcion}</p>
+    </div>
+  );
 }
+
 export default Tarjeta;
